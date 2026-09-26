@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Form</title>
+<style>
+  body { font-family: sans-serif; max-width: 400px; margin: 50px auto; }
+  input, select { display: block; width: 100%; margin: 10px 0; padding: 8px; }
+  button { padding: 8px 16px; }
+</style>
+</head>
+<body>
+  <h2>User Details</h2>
+  <input id="name" placeholder="Name">
+  <input id="email" placeholder="Email">
+  <input id="role" placeholder="Role">
+  <button onclick="submitForm()">Submit</button>
+  <p id="output"></p>
+
+<script>
+function submitForm() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const role = document.getElementById('role').value;
+  document.getElementById('output').textContent = `Name: ${name}, Email: ${email}, Role: ${role}`;
+}
+</script>
+</body>
+</html>
