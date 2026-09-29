@@ -1,7 +1,7 @@
 
 
 fetch('http://localhost:8080/employees', {
-    method: 'GET',
+    method: 'GET'
 })
     .then(res => res.json())
     .then(data => {
