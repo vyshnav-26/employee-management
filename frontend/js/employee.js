@@ -1,4 +1,11 @@
-
+function deleteEmployee(id) {
+    fetch(`http://localhost:8080/employees/${id}`, {
+        method: 'DELETE'
+    })
+        .then(data => {
+            console.log("deleted employee ", id);
+        })
+}
 
 fetch('http://localhost:8080/employees', {
     method: 'GET'
@@ -21,6 +28,16 @@ fetch('http://localhost:8080/employees', {
             const emailCell = document.createElement("td");
             emailCell.textContent = employee.email;
             row.appendChild(emailCell);
+            const buttonCell = document.createElement("td");
+            const button = document.createElement("button");
+            button.textContent = "Delete";
+            button.className = "button";
+            button.addEventListener("click", () => {
+                deleteEmployee(employee.id);
+                row.remove();
+            });
+            buttonCell.appendChild(button);
+            row.appendChild(buttonCell);
 
             table.appendChild(row);
         });

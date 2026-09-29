@@ -3,3 +3,8 @@
     border-radius: 10px;
     font-size: 30px
 }
+
+.button {
+    background-color: red;
+    color: black;
+}

@@ -56,7 +56,7 @@ public class EmployeeService{
 
     public Employee deleteEmployee(Integer id){
         Employee employee = search(id);
-        employeeRepository.deleteById(employee.getId());
+        employeeRepository.deleteById(id);
         return employee;
     }
 }
