@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>User Form</title>
-<style>
-  body { font-family: sans-serif; max-width: 400px; margin: 50px auto; }
-  input, select { display: block; width: 100%; margin: 10px 0; padding: 8px; }
-  button { padding: 8px 16px; }
-</style>
+  <title>User Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+    }
+
+    input,
+    select {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+
+    button {
+      padding: 8px 16px;
+    }
+  </style>
 </head>
+
 <body>
   <h2>User Details</h2>
   <input id="name" placeholder="Name">
@@ -16,21 +32,23 @@
   <button onclick="submitForm()">Submit</button>
   <p id="output"></p>
 
-<script>
-function submitForm() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const role = document.getElementById('role').value;
+  <script>
+    function submitForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const role = document.getElementById('role').value;
 
-  fetch('http://localhost:8080/employees', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({name, email, role})
-  })
-  .then(res => res.json())
-  .then(data => console.log(data));
-}
+      fetch('http://localhost:8080/employees', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, role })
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
+      document.getElementById('output').textContent = "Submitted";
+    }
 
-</script>
+  </script>
 </body>
+
 </html>
