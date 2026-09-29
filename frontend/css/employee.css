@@ -1,10 +1,15 @@
 .body {
     border: 1px solid black;
     border-radius: 10px;
-    font-size: 30px
+    font-size: 30px;
 }
 
 .button {
     background-color: red;
+    color: black;
+}
+
+.update {
+    background-color: green;
     color: black;
 }
