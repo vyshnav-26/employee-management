@@ -79,7 +79,7 @@ fetch(`${API}/employees`, {
         updateButton.className = "update";
         updateButton.addEventListener("click", () => {
             updateEmployee(idInput.value, roleInput.value, nameInput.value, emailInput.value);
-            document.getElementByID(idInput.value).remove();
+            document.getElementById(idInput.value).remove();
         });
         updateCell.appendChild(updateButton);
         row.appendChild(updateCell);
