@@ -18,6 +18,7 @@ function updateEmployee(id, role, name, email) {
         .then(data => {
             console.log(data);
         })
+        location.reload();
 }
 
 fetch(`${API}/employees`, {

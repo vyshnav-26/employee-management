@@ -19,7 +19,7 @@ import com.example.employee_management.service.EmployeeService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5500")
+@CrossOrigin(origins = "${cors.allowed-origin}")
 @RestController
 class EmployeeController{
 
