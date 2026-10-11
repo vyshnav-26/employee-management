@@ -1,5 +1,7 @@
+import {API} from "./config.js";
+
 function deleteEmployee(id) {
-    fetch(`http://localhost:8081/employees/${id}`, {
+    fetch(`${API}/employees/${id}`, {
         method: 'DELETE'
     })
         .then(data => {
@@ -7,7 +9,7 @@ function deleteEmployee(id) {
         })
 }
 function updateEmployee(id, role, name, email) {
-    fetch(`http://localhost:8081/employees/${id}`, {
+    fetch(`${API}/employees/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/JSON' },
         body: JSON.stringify({ name, role, email })
@@ -18,7 +20,7 @@ function updateEmployee(id, role, name, email) {
         })
 }
 
-fetch('http://localhost:8081/employees', {
+fetch(`${API}/employees`, {
     method: 'GET'
 })
     .then(res => res.json())
