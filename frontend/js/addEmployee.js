@@ -3,7 +3,7 @@ function submitForm() {
     const email = document.getElementById('email').value;
     const role = document.getElementById('role').value;
 
-    fetch('http://localhost:8080/employees', {
+    fetch('http://localhost:8081/employees', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, role })
