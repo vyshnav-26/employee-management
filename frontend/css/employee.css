@@ -16,3 +16,19 @@
     background-color: green;
     color: black;
 }
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td {
+    border: 1px solid black;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th{
+    background: #f2f2f2;
+}
+
